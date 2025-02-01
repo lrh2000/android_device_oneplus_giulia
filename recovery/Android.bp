@@ -1,0 +1,6 @@
+prebuilt_root {
+    name: "init.recovery.qcom.rc",
+    src: "init.recovery.qcom.rc",
+    recovery: true,
+    install_in_root: true,
+}

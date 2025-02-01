@@ -1,0 +1,17 @@
+on init
+    setprop sys.usb.configfs 1
+
+    # Force USB to peripheral mode. Otherwise ADB won't work.
+    # https://review.lineageos.org/c/LineageOS/android_device_xiaomi_sm6150-common/+/291494
+    wait /sys/bus/platform/devices/a600000.ssusb/mode 1
+    write /sys/bus/platform/devices/a600000.ssusb/mode peripheral
+    wait /sys/class/udc/${ro.boot.usbcontroller} 1
+
+# From bootconfig: androidboot.usbcontroller=...
+on property:ro.boot.usbcontroller=*
+    setprop sys.usb.controller ${ro.boot.usbcontroller}
+
+# Make things like /dev/block/bootdevice/by-name/misc work
+on fs
+    wait /dev/block/platform/soc/${ro.boot.bootdevice}
+    symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice

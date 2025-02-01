@@ -22,5 +22,10 @@ PRODUCT_EXTRA_VNDK_VERSIONS += 34
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_BUILD_SUPER_PARTITION := false
 
+# Recovery
+PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
+PRODUCT_PACKAGES += \
+	init.recovery.qcom.rc
+
 # Virtual A/B
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
