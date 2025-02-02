@@ -26,6 +26,9 @@ PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
 PRODUCT_PACKAGES += \
 	init.recovery.qcom.rc
+PRODUCT_PACKAGES += \
+	fastbootd \
+	android.hardware.boot-service.default_recovery
 
 # Virtual A/B
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
