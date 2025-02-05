@@ -1,0 +1,1 @@
+genfscon sysfs /devices/platform/soc/a600000.ssusb/mode u:object_r:sysfs_usb_mode:s0

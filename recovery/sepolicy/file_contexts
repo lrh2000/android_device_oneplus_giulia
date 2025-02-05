@@ -1,0 +1,4 @@
+# /dev/block/by-name/misc
+/dev/block/sda3 u:object_r:misc_block_device:s0
+# /dev/block/by-name/super
+/dev/block/sda14 u:object_r:super_block_device:s0

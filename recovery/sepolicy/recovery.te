@@ -1,0 +1,8 @@
+type sysfs_usb_mode;
+recovery_only(`
+    allow init sysfs_usb_mode:file { open write getattr };
+')
+
+recovery_only(`
+    allow init super_block_device:blk_file { relabelto };
+')
