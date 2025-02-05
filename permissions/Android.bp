@@ -4,3 +4,10 @@ prebuilt_etc {
     sub_dir: "permissions",
     system_ext_specific: true,
 }
+
+prebuilt_etc {
+    name: "privapp-permissions-ims.xml",
+    src: "privapp-permissions-ims.xml",
+    sub_dir: "permissions",
+    system_ext_specific: true,
+}

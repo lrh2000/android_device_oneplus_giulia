@@ -22,8 +22,13 @@ PRODUCT_EXTRA_VNDK_VERSIONS += 34
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_BUILD_SUPER_PARTITION := false
 
+# Overlay
+PRODUCT_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+
 # Soong
-PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
+PRODUCT_SOONG_NAMESPACES += \
+	$(LOCAL_PATH) \
+	hardware/oplus
 
 # Recovery
 PRODUCT_PACKAGES += \
@@ -38,6 +43,16 @@ PRODUCT_PACKAGES += \
 	qti_telephony_hidl_wrapper.xml
 PRODUCT_PACKAGES += \
 	privapp-permissions-telephony.xml
+
+# IMS
+PRODUCT_PACKAGES += \
+	qti-telephony-utils \
+	qti_telephony_utils.xml \
+	ims-ext-common \
+	ims_ext_common.xml
+PRODUCT_PACKAGES += \
+	privapp-permissions-ims.xml
+$(call inherit-product, hardware/oplus/oplus-fwk/oplus-fwk.mk)
 
 # Virtual A/B
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)

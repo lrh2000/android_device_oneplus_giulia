@@ -1,2 +1,18 @@
 # Telephony
 system_ext/app/QtiTelephonyService/QtiTelephonyService.apk:system_ext/priv-app/QtiTelephonyService/QtiTelephonyService.apk
+
+# IMS
+system/lib64/vendor.qti.diaghal-V1-ndk.so
+system_ext/framework/oplus-ims-ext.jar
+system_ext/lib64/lib-imsvideocodec.so
+system_ext/lib64/lib-imsvt.so
+system_ext/lib64/lib-imsvtextutils.so
+system_ext/lib64/lib-imsvtutils.so
+system_ext/lib64/libdiag_system.so
+system_ext/lib64/libimscamera_jni.so
+system_ext/lib64/libimsmedia_jni.so
+system_ext/lib64/vendor.qti.ImsRtpService-V1-ndk.so
+system_ext/lib64/vendor.qti.diaghal@1.0.so
+system_ext/lib64/vendor.qti.imsrtpservice@3.0.so
+system_ext/lib64/vendor.qti.imsrtpservice@3.1.so
+system_ext/priv-app/ims/ims.apk
