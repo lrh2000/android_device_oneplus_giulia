@@ -22,13 +22,22 @@ PRODUCT_EXTRA_VNDK_VERSIONS += 34
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_BUILD_SUPER_PARTITION := false
 
-# Recovery
+# Soong
 PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
+
+# Recovery
 PRODUCT_PACKAGES += \
 	init.recovery.qcom.rc
 PRODUCT_PACKAGES += \
 	fastbootd \
 	android.hardware.boot-service.default_recovery
+
+# Telephony
+PRODUCT_PACKAGES += \
+	qti-telephony-hidl-wrapper \
+	qti_telephony_hidl_wrapper.xml
+PRODUCT_PACKAGES += \
+	privapp-permissions-telephony.xml
 
 # Virtual A/B
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)

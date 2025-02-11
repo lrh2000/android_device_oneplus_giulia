@@ -1,0 +1,6 @@
+prebuilt_etc {
+    name: "privapp-permissions-telephony.xml",
+    src: "privapp-permissions-telephony.xml",
+    sub_dir: "permissions",
+    system_ext_specific: true,
+}

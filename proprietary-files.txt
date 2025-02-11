@@ -1,0 +1,2 @@
+# Telephony
+system_ext/app/QtiTelephonyService/QtiTelephonyService.apk:system_ext/priv-app/QtiTelephonyService/QtiTelephonyService.apk
