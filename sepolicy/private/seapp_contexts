@@ -1,0 +1,2 @@
+user=_app seinfo=platform name=org.codeaurora.ims isPrivApp=true domain=vendor_qtelephony type=app_data_file levelFrom=all
+user=_app seinfo=platform name=com.qti.phone isPrivApp=true domain=vendor_qtelephony type=app_data_file levelFrom=all

@@ -1,0 +1,3 @@
+(typeattributeset vendor_qtelephony_34_0 (vendor_qtelephony))
+(expandtypeattribute (vendor_qtelephony_34_0) true)
+(typeattribute vendor_qtelephony_34_0)

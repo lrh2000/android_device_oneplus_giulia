@@ -96,3 +96,7 @@ AB_OTA_PARTITIONS += \
 	vendor \
 	vendor_boot \
 	vendor_dlkm
+
+# Sepolicy
+SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(LOCAL_PATH)/sepolicy/public
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(LOCAL_PATH)/sepolicy/private

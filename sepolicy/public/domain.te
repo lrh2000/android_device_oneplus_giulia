@@ -1,0 +1,10 @@
+type vendor_qtelephony, domain;
+
+# Dummy attributes and types.
+# Define them to make `qtelephony.te` happy.
+attribute vendor_hal_atfwd;
+attribute vendor_hal_atfwd_client;
+attribute vendor_hal_diaghal;
+attribute vendor_hal_diaghal_client;
+type vendor_dpmtcm_socket;
+type vendor_dpmd;
