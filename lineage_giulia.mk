@@ -22,6 +22,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/oneplus/giulia/device.mk)
 $(call inherit-product, vendor/oneplus/giulia/giulia-vendor.mk)
 
+# Inherit from gapps vendor if it exists.
+$(call inherit-product-if-exists, vendor/gapps/arm64/arm64-vendor.mk)
+
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
